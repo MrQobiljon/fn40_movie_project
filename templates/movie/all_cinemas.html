@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+<section id="films">
+  <div class="section-header">
+    <h2 class="section-title">Mashhur <span>Filmlar</span></h2>
+    <a href="#" class="section-link">Ko'proq <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+  </div>
+  <div class="films-grid">
+
+      {% for cinema in cinemas %}
+    <a href="{% url 'detail' cinema.id %}" class="film-card">
+      <div class="film-poster">
+        <div class="film-poster-placeholder">
+          <i class="fa-solid fa-film"></i>
+          <span>{{ cinema.name }}</span>
+        </div>
+        <span class="film-badge">TOP</span>
+        <span class="film-rating-badge"><i class="fa-solid fa-star fa-xs"></i> 8.9</span>
+      </div>
+      <div class="film-info">
+        <div class="film-title">{{ cinema.name }}</div>
+        <div class="film-meta-row">
+          <span class="film-year">{{ cinema.published_year }}</span>
+          <span class="film-genre-tag">Fantastika</span>
+        </div>
+      </div>
+    </a>
+      {% endfor %}
+
+  </div>
+</section>
+{% endblock main %}

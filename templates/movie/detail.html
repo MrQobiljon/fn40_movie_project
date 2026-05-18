@@ -1,0 +1,264 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/style_detail.css' %}">
+{% endblock style %}
+
+{% block hero %}
+{% endblock hero %}
+
+{% block genre %}
+{% endblock genre %}
+
+{% block main %}
+<!-- BACK -->
+<div class="back-bar">
+  <a href="index.html" class="back-link">
+    <i class="fa-solid fa-arrow-left fa-xs"></i> Orqaga qaytish
+  </a>
+</div>
+
+<!-- ── DETAIL HERO ── -->
+<div class="detail-hero">
+  <!-- POSTER -->
+  <div class="detail-poster fade-up">
+    <div class="detail-poster-img">
+      <i class="fa-solid fa-film"></i>
+      <span>OPPENHEIMER</span>
+    </div>
+    <div class="poster-actions">
+      <button class="btn-watch">
+        <i class="fa-solid fa-play fa-xs"></i> Ko'rish
+      </button>
+      <button class="btn-icon" title="Saqlash"><i class="fa-regular fa-bookmark"></i></button>
+      <button class="btn-icon" title="Ulashish"><i class="fa-solid fa-share-nodes"></i></button>
+    </div>
+  </div>
+
+  <!-- INFO -->
+  <div class="detail-info">
+    <div class="detail-badges fade-up">
+      <span class="tag tag-genre"><i class="fa-solid fa-clapperboard fa-xs"></i> Biografiya</span>
+      <span class="tag tag-genre"><i class="fa-solid fa-masks-theater fa-xs"></i> Drama</span>
+      <span class="tag tag-genre"><i class="fa-solid fa-atom fa-xs"></i> Tarix</span>
+      <span class="tag tag-year"><i class="fa-regular fa-calendar fa-xs"></i> 2023</span>
+      <span class="tag tag-pg"><i class="fa-solid fa-shield fa-xs"></i> 16+</span>
+    </div>
+
+    <h1 class="detail-title fade-up delay-1">Oppenheimer</h1>
+    <p class="detail-original fade-up delay-1">The Father of the Atomic Bomb</p>
+
+    <!-- Rating row -->
+    <div class="rating-row fade-up delay-2">
+      <div class="rating-item">
+        <div class="rating-value">8.9</div>
+        <div class="stars-row">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <div class="rating-label">IMDb reytingi</div>
+      </div>
+      <div class="rating-divider"></div>
+      <div class="rating-item">
+        <div class="rating-value">88%</div>
+        <div class="rating-label"><i class="fa-solid fa-users fa-xs"></i> Tomoshabinlar</div>
+      </div>
+      <div class="rating-divider"></div>
+      <div class="rating-item">
+        <div class="rating-value">93%</div>
+        <div class="rating-label"><i class="fa-solid fa-award fa-xs"></i> Tanqidchilar</div>
+      </div>
+      <div class="rating-divider"></div>
+      <div class="rating-item">
+        <div class="rating-value">13</div>
+        <div class="rating-label"><i class="fa-solid fa-trophy fa-xs"></i> Oscar</div>
+      </div>
+      <div class="rating-divider"></div>
+      <div class="rating-item">
+        <div class="rating-value">180<small style="font-size:14px;color:var(--muted)">d</small></div>
+        <div class="rating-label"><i class="fa-regular fa-clock fa-xs"></i> Davomiyligi</div>
+      </div>
+    </div>
+
+    <p class="detail-desc fade-up delay-2">
+      Amerika fizigi J. Robert Oppenheimerning hayoti haqida epik qo'rquv film. Ikkinchi Jahon urushi davrida Manhattan loyihasi doirasida dunyo tarixining eng xavfli qurolini yaratgan insonning ichki ziddiyatlari, ilmiy ehtiroslar va axloqiy savollar bilan kurashi hikoya qilinadi.
+    </p>
+
+    <!-- Specs -->
+    <div class="specs-grid fade-up delay-3">
+      <div class="spec-item">
+        <div class="spec-label"><i class="fa-solid fa-globe"></i> Mamlakat</div>
+        <div class="spec-value">AQSh</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label"><i class="fa-solid fa-language"></i> Til</div>
+        <div class="spec-value">Ingliz tili</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label"><i class="fa-solid fa-dollar-sign"></i> Byudjet</div>
+        <div class="spec-value">$100 mln</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label"><i class="fa-solid fa-chart-line"></i> Daromad</div>
+        <div class="spec-value">$952 mln</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label"><i class="fa-regular fa-calendar-check"></i> Premyera</div>
+        <div class="spec-value">21 Iyul 2023</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label"><i class="fa-solid fa-film"></i> Format</div>
+        <div class="spec-value">IMAX 70mm</div>
+      </div>
+    </div>
+
+    <!-- Director -->
+    <div class="director-row fade-up delay-3">
+      <img src="https://i.pravatar.cc/52?img=50" alt="Christopher Nolan" class="director-avatar">
+      <div class="director-info">
+        <small><i class="fa-solid fa-video fa-xs"></i> Rejissyor</small>
+        <div class="director-name">Christopher Nolan</div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:8px;">
+        <span class="tag tag-genre" style="font-size:11px;">Dunkirk</span>
+        <span class="tag tag-genre" style="font-size:11px;">Inception</span>
+        <span class="tag tag-genre" style="font-size:11px;">Interstellar</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ── TABS ── -->
+<div class="section">
+  <div class="tabs-bar">
+    <button class="tab-btn active" onclick="switchTab('cast', this)"><i class="fa-solid fa-users fa-xs"></i> Aktyorlar</button>
+    <button class="tab-btn" onclick="switchTab('reviews', this)"><i class="fa-regular fa-comment fa-xs"></i> Sharhlar</button>
+    <button class="tab-btn" onclick="switchTab('related', this)"><i class="fa-solid fa-film fa-xs"></i> O'xshash Filmlar</button>
+  </div>
+
+  <!-- CAST TAB -->
+  <div class="tab-content active" id="tab-cast">
+    <div class="section-header">
+      <h2 class="section-title">Asosiy <span>Aktyorlar</span></h2>
+    </div>
+    <div class="cast-grid">
+        {% for actor in cinema.actors.all %}
+      <div class="cast-card">
+        <img src="" alt="{{ actor.full_name }}" class="cast-avatar">
+        <div class="cast-name">{{ actor.full_name }}</div>
+        <div class="cast-role">{{ actor.full_name }}</div>
+      </div>
+        {% endfor %}
+    </div>
+  </div>
+
+  <!-- REVIEWS TAB -->
+  <div class="tab-content" id="tab-reviews">
+    <div class="section-header">
+      <h2 class="section-title">Tomoshabin <span>Sharhlari</span></h2>
+    </div>
+    <div class="reviews-list">
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer">
+            <img src="https://i.pravatar.cc/36?img=22" alt="Reviewer" class="reviewer-avatar">
+            <div>
+              <div class="reviewer-name">Alisher T.</div>
+              <div class="reviewer-date">15 Avgust 2023</div>
+            </div>
+          </div>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+        <p class="review-text">Bu film meni lol qoldirdi. Christopher Nolan yana bir bor o'zining dahosini isbotladi. Cillian Murphy'ning ijrosi — so'zsiz eng yaxshi aktyor o'yini. 3 soat o'tirganingni his etmaysan.</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer">
+            <img src="https://i.pravatar.cc/36?img=47" alt="Reviewer" class="reviewer-avatar">
+            <div>
+              <div class="reviewer-name">Malika R.</div>
+              <div class="reviewer-date">22 Avgust 2023</div>
+            </div>
+          </div>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+        </div>
+        <p class="review-text">Vizual jihatdan ajoyib, musiqa — Hans Zimmerning zo'r asari. Lekin ba'zi sahnalar biroz uzun. Umuman olganda, 2023 yilning eng yaxshi filmi desam bo'ladi.</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer">
+            <img src="https://i.pravatar.cc/36?img=33" alt="Reviewer" class="reviewer-avatar">
+            <div>
+              <div class="reviewer-name">Bobur S.</div>
+              <div class="reviewer-date">1 Sentyabr 2023</div>
+            </div>
+          </div>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+        </div>
+        <p class="review-text">Atom bombasi yaratilishining murakkab va dahshatli tarixini shu qadar insoniy qilib ko'rsatish — bu Nolanning eng katta yutug'i. IMAX formatida ko'ring!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED TAB -->
+  <div class="tab-content" id="tab-related">
+    <div class="section-header">
+      <h2 class="section-title">O'xshash <span>Filmlar</span></h2>
+    </div>
+    <div class="related-grid">
+      <a href="detail.html" class="related-card">
+        <div class="related-poster"><i class="fa-solid fa-film"></i><span>INTERSTELLAR</span></div>
+        <div class="related-info"><div class="related-title">Interstellar</div><div class="related-year">2014</div></div>
+      </a>
+      <a href="detail.html" class="related-card">
+        <div class="related-poster"><i class="fa-solid fa-film"></i><span>INCEPTION</span></div>
+        <div class="related-info"><div class="related-title">Inception</div><div class="related-year">2010</div></div>
+      </a>
+      <a href="detail.html" class="related-card">
+        <div class="related-poster"><i class="fa-solid fa-film"></i><span>DUNKIRK</span></div>
+        <div class="related-info"><div class="related-title">Dunkirk</div><div class="related-year">2017</div></div>
+      </a>
+      <a href="detail.html" class="related-card">
+        <div class="related-poster"><i class="fa-solid fa-film"></i><span>PRESTIGE</span></div>
+        <div class="related-info"><div class="related-title">The Prestige</div><div class="related-year">2006</div></div>
+      </a>
+      <a href="detail.html" class="related-card">
+        <div class="related-poster"><i class="fa-solid fa-film"></i><span>IMITATION GAME</span></div>
+        <div class="related-info"><div class="related-title">The Imitation Game</div><div class="related-year">2014</div></div>
+      </a>
+      <a href="detail.html" class="related-card">
+        <div class="related-poster"><i class="fa-solid fa-film"></i><span>KILLERS</span></div>
+        <div class="related-info"><div class="related-title">Killers of the Flower Moon</div><div class="related-year">2023</div></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function switchTab(tabId, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tabId).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+{% endblock main %}

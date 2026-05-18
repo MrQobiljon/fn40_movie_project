@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CineVerse — Kino Dunyosi</title>
+
+    {% include 'components/_styles.html' %}
+
+    {% block style %}
+    {% endblock style %}
+
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+{% include 'components/_nav.html' %}
+
+{% block hero %}
+<!-- ── HERO ── -->
+{% include 'components/_hero.html' %}
+{% endblock hero %}
+
+{% block genre %}
+<!-- ── GENRES ── -->
+{% include 'components/_genres.html' %}
+{% endblock genre %}
+
+<div class="divider"></div>
+
+{% block main %}
+<!-- ── FILMS ── -->
+
+{% endblock main %}
+
+<!-- ── FOOTER ── -->
+{% include 'components/_footer.html' %}
+
+</body>
+</html>
