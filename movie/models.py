@@ -1,11 +1,12 @@
 from django.db import models
 from django.core.validators import FileExtensionValidator
+from django.contrib.auth.models import User
 
 
 class Actor(models.Model):
-    full_name = models.CharField(max_length=255)
-    birth_year = models.PositiveSmallIntegerField(null=True, blank=True)
-    photo = models.ImageField(upload_to='actors/', null=True, blank=True)
+    full_name = models.CharField(max_length=255, verbose_name="F.I.O")
+    birth_year = models.PositiveSmallIntegerField(null=True, blank=True, verbose_name="Tug'ilgan yili")
+    photo = models.ImageField(upload_to='actors/', null=True, blank=True, verbose_name="Rasmi")
 
     def __str__(self):
         return self.full_name
@@ -14,6 +15,7 @@ class Actor(models.Model):
         verbose_name = 'Aktor'
         verbose_name_plural = 'Aktorlar'
         ordering = ['-full_name']
+
 
 class Cinema(models.Model):
     name = models.CharField(max_length=255, verbose_name="Nomi")
@@ -38,3 +40,8 @@ class Cinema(models.Model):
     class Meta:
         verbose_name = "Kino"
         verbose_name_plural = "Kinolar"
+
+
+class CinemaLike(models.Model):
+    cinema = models.ForeignKey(Cinema, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)

@@ -27,6 +27,9 @@
         </div>
       </div>
     </a>
+    <a href="{% url 'create_like' cinema.id %}">
+      <i class="fa-{% if cinema.like %}solid{% else %}regular{% endif %} fa-bookmark"></i>
+    </a>
       {% endfor %}
 
   </div>
