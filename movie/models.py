@@ -1,6 +1,8 @@
 from django.db import models
 from django.core.validators import FileExtensionValidator
 from django.contrib.auth.models import User
+from django.contrib import admin
+from django.utils.safestring import mark_safe
 
 
 class Actor(models.Model):
@@ -41,7 +43,27 @@ class Cinema(models.Model):
         verbose_name = "Kino"
         verbose_name_plural = "Kinolar"
 
+    def __str__(self):
+        return self.name
+
+    # @admin.display(description="Rasmi")
+    # def get_image(self):
+    #     if self.poster:
+    #         return mark_safe(f'<img src="{self.poster.url}" width="150px">')
+    #     else:
+    #         return '-'
+    #
 
 class CinemaLike(models.Model):
     cinema = models.ForeignKey(Cinema, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+
+class Comment(models.Model):
+    text = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    cinema = models.ForeignKey(Cinema, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+
+    def __str__(self):
+        return self.text
